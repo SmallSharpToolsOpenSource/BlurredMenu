@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		262EFAB718C68EBB00FF4FDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262EFAB618C68EBB00FF4FDC /* Foundation.framework */; };
+		262EFAB918C68EBB00FF4FDC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262EFAB818C68EBB00FF4FDC /* CoreGraphics.framework */; };
+		262EFABB18C68EBB00FF4FDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262EFABA18C68EBB00FF4FDC /* UIKit.framework */; };
+		262EFAC118C68EBB00FF4FDC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 262EFABF18C68EBB00FF4FDC /* InfoPlist.strings */; };
+		262EFAC318C68EBB00FF4FDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 262EFAC218C68EBB00FF4FDC /* main.m */; };
+		262EFAC718C68EBB00FF4FDC /* SSTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 262EFAC618C68EBB00FF4FDC /* SSTAppDelegate.m */; };
+		262EFACA18C68EBB00FF4FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262EFAC818C68EBB00FF4FDC /* Main.storyboard */; };
+		262EFACD18C68EBB00FF4FDC /* SSTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262EFACC18C68EBB00FF4FDC /* SSTViewController.m */; };
+		262EFACF18C68EBB00FF4FDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262EFACE18C68EBB00FF4FDC /* Images.xcassets */; };
+		262EFAD618C68EBB00FF4FDC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262EFAD518C68EBB00FF4FDC /* XCTest.framework */; };
+		262EFAD718C68EBB00FF4FDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262EFAB618C68EBB00FF4FDC /* Foundation.framework */; };
+		262EFAD818C68EBB00FF4FDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262EFABA18C68EBB00FF4FDC /* UIKit.framework */; };
+		262EFAE018C68EBB00FF4FDC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 262EFADE18C68EBB00FF4FDC /* InfoPlist.strings */; };
+		262EFAE218C68EBB00FF4FDC /* BlurredMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 262EFAE118C68EBB00FF4FDC /* BlurredMenuTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		262EFAD918C68EBB00FF4FDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 262EFAAB18C68EBB00FF4FDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 262EFAB218C68EBB00FF4FDC;
+			remoteInfo = BlurredMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		262EFAB318C68EBB00FF4FDC /* BlurredMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlurredMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		262EFAB618C68EBB00FF4FDC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		262EFAB818C68EBB00FF4FDC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		262EFABA18C68EBB00FF4FDC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		262EFABE18C68EBB00FF4FDC /* BlurredMenu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlurredMenu-Info.plist"; sourceTree = "<group>"; };
+		262EFAC018C68EBB00FF4FDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		262EFAC218C68EBB00FF4FDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		262EFAC418C68EBB00FF4FDC /* BlurredMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlurredMenu-Prefix.pch"; sourceTree = "<group>"; };
+		262EFAC518C68EBB00FF4FDC /* SSTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSTAppDelegate.h; sourceTree = "<group>"; };
+		262EFAC618C68EBB00FF4FDC /* SSTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSTAppDelegate.m; sourceTree = "<group>"; };
+		262EFAC918C68EBB00FF4FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		262EFACB18C68EBB00FF4FDC /* SSTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSTViewController.h; sourceTree = "<group>"; };
+		262EFACC18C68EBB00FF4FDC /* SSTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSTViewController.m; sourceTree = "<group>"; };
+		262EFACE18C68EBB00FF4FDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		262EFAD418C68EBB00FF4FDC /* BlurredMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlurredMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		262EFAD518C68EBB00FF4FDC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		262EFADD18C68EBB00FF4FDC /* BlurredMenuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlurredMenuTests-Info.plist"; sourceTree = "<group>"; };
+		262EFADF18C68EBB00FF4FDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		262EFAE118C68EBB00FF4FDC /* BlurredMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurredMenuTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		262EFAB018C68EBB00FF4FDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262EFAB918C68EBB00FF4FDC /* CoreGraphics.framework in Frameworks */,
+				262EFABB18C68EBB00FF4FDC /* UIKit.framework in Frameworks */,
+				262EFAB718C68EBB00FF4FDC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262EFAD118C68EBB00FF4FDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262EFAD618C68EBB00FF4FDC /* XCTest.framework in Frameworks */,
+				262EFAD818C68EBB00FF4FDC /* UIKit.framework in Frameworks */,
+				262EFAD718C68EBB00FF4FDC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		262EFAAA18C68EBB00FF4FDC = {
+			isa = PBXGroup;
+			children = (
+				262EFABC18C68EBB00FF4FDC /* BlurredMenu */,
+				262EFADB18C68EBB00FF4FDC /* BlurredMenuTests */,
+				262EFAB518C68EBB00FF4FDC /* Frameworks */,
+				262EFAB418C68EBB00FF4FDC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		262EFAB418C68EBB00FF4FDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				262EFAB318C68EBB00FF4FDC /* BlurredMenu.app */,
+				262EFAD418C68EBB00FF4FDC /* BlurredMenuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		262EFAB518C68EBB00FF4FDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				262EFAB618C68EBB00FF4FDC /* Foundation.framework */,
+				262EFAB818C68EBB00FF4FDC /* CoreGraphics.framework */,
+				262EFABA18C68EBB00FF4FDC /* UIKit.framework */,
+				262EFAD518C68EBB00FF4FDC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		262EFABC18C68EBB00FF4FDC /* BlurredMenu */ = {
+			isa = PBXGroup;
+			children = (
+				262EFAC518C68EBB00FF4FDC /* SSTAppDelegate.h */,
+				262EFAC618C68EBB00FF4FDC /* SSTAppDelegate.m */,
+				262EFAC818C68EBB00FF4FDC /* Main.storyboard */,
+				262EFACB18C68EBB00FF4FDC /* SSTViewController.h */,
+				262EFACC18C68EBB00FF4FDC /* SSTViewController.m */,
+				262EFACE18C68EBB00FF4FDC /* Images.xcassets */,
+				262EFABD18C68EBB00FF4FDC /* Supporting Files */,
+			);
+			path = BlurredMenu;
+			sourceTree = "<group>";
+		};
+		262EFABD18C68EBB00FF4FDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				262EFABE18C68EBB00FF4FDC /* BlurredMenu-Info.plist */,
+				262EFABF18C68EBB00FF4FDC /* InfoPlist.strings */,
+				262EFAC218C68EBB00FF4FDC /* main.m */,
+				262EFAC418C68EBB00FF4FDC /* BlurredMenu-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		262EFADB18C68EBB00FF4FDC /* BlurredMenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				262EFAE118C68EBB00FF4FDC /* BlurredMenuTests.m */,
+				262EFADC18C68EBB00FF4FDC /* Supporting Files */,
+			);
+			path = BlurredMenuTests;
+			sourceTree = "<group>";
+		};
+		262EFADC18C68EBB00FF4FDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				262EFADD18C68EBB00FF4FDC /* BlurredMenuTests-Info.plist */,
+				262EFADE18C68EBB00FF4FDC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		262EFAB218C68EBB00FF4FDC /* BlurredMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 262EFAE518C68EBB00FF4FDC /* Build configuration list for PBXNativeTarget "BlurredMenu" */;
+			buildPhases = (
+				262EFAAF18C68EBB00FF4FDC /* Sources */,
+				262EFAB018C68EBB00FF4FDC /* Frameworks */,
+				262EFAB118C68EBB00FF4FDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlurredMenu;
+			productName = BlurredMenu;
+			productReference = 262EFAB318C68EBB00FF4FDC /* BlurredMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		262EFAD318C68EBB00FF4FDC /* BlurredMenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 262EFAE818C68EBB00FF4FDC /* Build configuration list for PBXNativeTarget "BlurredMenuTests" */;
+			buildPhases = (
+				262EFAD018C68EBB00FF4FDC /* Sources */,
+				262EFAD118C68EBB00FF4FDC /* Frameworks */,
+				262EFAD218C68EBB00FF4FDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				262EFADA18C68EBB00FF4FDC /* PBXTargetDependency */,
+			);
+			name = BlurredMenuTests;
+			productName = BlurredMenuTests;
+			productReference = 262EFAD418C68EBB00FF4FDC /* BlurredMenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		262EFAAB18C68EBB00FF4FDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SST;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = SmallSharptools;
+				TargetAttributes = {
+					262EFAD318C68EBB00FF4FDC = {
+						TestTargetID = 262EFAB218C68EBB00FF4FDC;
+					};
+				};
+			};
+			buildConfigurationList = 262EFAAE18C68EBB00FF4FDC /* Build configuration list for PBXProject "BlurredMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 262EFAAA18C68EBB00FF4FDC;
+			productRefGroup = 262EFAB418C68EBB00FF4FDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				262EFAB218C68EBB00FF4FDC /* BlurredMenu */,
+				262EFAD318C68EBB00FF4FDC /* BlurredMenuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		262EFAB118C68EBB00FF4FDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262EFACF18C68EBB00FF4FDC /* Images.xcassets in Resources */,
+				262EFAC118C68EBB00FF4FDC /* InfoPlist.strings in Resources */,
+				262EFACA18C68EBB00FF4FDC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262EFAD218C68EBB00FF4FDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262EFAE018C68EBB00FF4FDC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		262EFAAF18C68EBB00FF4FDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262EFAC318C68EBB00FF4FDC /* main.m in Sources */,
+				262EFAC718C68EBB00FF4FDC /* SSTAppDelegate.m in Sources */,
+				262EFACD18C68EBB00FF4FDC /* SSTViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262EFAD018C68EBB00FF4FDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262EFAE218C68EBB00FF4FDC /* BlurredMenuTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		262EFADA18C68EBB00FF4FDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 262EFAB218C68EBB00FF4FDC /* BlurredMenu */;
+			targetProxy = 262EFAD918C68EBB00FF4FDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		262EFABF18C68EBB00FF4FDC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				262EFAC018C68EBB00FF4FDC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		262EFAC818C68EBB00FF4FDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				262EFAC918C68EBB00FF4FDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		262EFADE18C68EBB00FF4FDC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				262EFADF18C68EBB00FF4FDC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		262EFAE318C68EBB00FF4FDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		262EFAE418C68EBB00FF4FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		262EFAE618C68EBB00FF4FDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlurredMenu/BlurredMenu-Prefix.pch";
+				INFOPLIST_FILE = "BlurredMenu/BlurredMenu-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		262EFAE718C68EBB00FF4FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlurredMenu/BlurredMenu-Prefix.pch";
+				INFOPLIST_FILE = "BlurredMenu/BlurredMenu-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		262EFAE918C68EBB00FF4FDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlurredMenu.app/BlurredMenu";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlurredMenu/BlurredMenu-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BlurredMenuTests/BlurredMenuTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		262EFAEA18C68EBB00FF4FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlurredMenu.app/BlurredMenu";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlurredMenu/BlurredMenu-Prefix.pch";
+				INFOPLIST_FILE = "BlurredMenuTests/BlurredMenuTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		262EFAAE18C68EBB00FF4FDC /* Build configuration list for PBXProject "BlurredMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262EFAE318C68EBB00FF4FDC /* Debug */,
+				262EFAE418C68EBB00FF4FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		262EFAE518C68EBB00FF4FDC /* Build configuration list for PBXNativeTarget "BlurredMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262EFAE618C68EBB00FF4FDC /* Debug */,
+				262EFAE718C68EBB00FF4FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		262EFAE818C68EBB00FF4FDC /* Build configuration list for PBXNativeTarget "BlurredMenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262EFAE918C68EBB00FF4FDC /* Debug */,
+				262EFAEA18C68EBB00FF4FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 262EFAAB18C68EBB00FF4FDC /* Project object */;
+}
