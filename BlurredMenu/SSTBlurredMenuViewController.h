@@ -1,5 +1,5 @@
 //
-//  SSTViewController.h
+//  SSTBlurredMenuViewController.h
 //  BlurredMenu
 //
 //  Created by Brennan Stehling on 3/4/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SSTViewController : UIViewController
+@interface SSTBlurredMenuViewController : UIViewController
 
 @end

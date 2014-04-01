@@ -14,13 +14,14 @@
 		262EFAC318C68EBB00FF4FDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 262EFAC218C68EBB00FF4FDC /* main.m */; };
 		262EFAC718C68EBB00FF4FDC /* SSTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 262EFAC618C68EBB00FF4FDC /* SSTAppDelegate.m */; };
 		262EFACA18C68EBB00FF4FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262EFAC818C68EBB00FF4FDC /* Main.storyboard */; };
-		262EFACD18C68EBB00FF4FDC /* SSTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262EFACC18C68EBB00FF4FDC /* SSTViewController.m */; };
 		262EFACF18C68EBB00FF4FDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262EFACE18C68EBB00FF4FDC /* Images.xcassets */; };
 		262EFAD618C68EBB00FF4FDC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262EFAD518C68EBB00FF4FDC /* XCTest.framework */; };
 		262EFAD718C68EBB00FF4FDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262EFAB618C68EBB00FF4FDC /* Foundation.framework */; };
 		262EFAD818C68EBB00FF4FDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262EFABA18C68EBB00FF4FDC /* UIKit.framework */; };
 		262EFAE018C68EBB00FF4FDC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 262EFADE18C68EBB00FF4FDC /* InfoPlist.strings */; };
 		262EFAE218C68EBB00FF4FDC /* BlurredMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 262EFAE118C68EBB00FF4FDC /* BlurredMenuTests.m */; };
+		262EFAED18C691C600FF4FDC /* SSTBlurredMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262EFAEC18C691C600FF4FDC /* SSTBlurredMenuViewController.m */; };
+		936D40F0EAE445CDA7056D79 /* libPods-BlurredMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC656DDA0584D639B1F6C72 /* libPods-BlurredMenu.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,16 @@
 		262EFAC518C68EBB00FF4FDC /* SSTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSTAppDelegate.h; sourceTree = "<group>"; };
 		262EFAC618C68EBB00FF4FDC /* SSTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSTAppDelegate.m; sourceTree = "<group>"; };
 		262EFAC918C68EBB00FF4FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		262EFACB18C68EBB00FF4FDC /* SSTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSTViewController.h; sourceTree = "<group>"; };
-		262EFACC18C68EBB00FF4FDC /* SSTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSTViewController.m; sourceTree = "<group>"; };
 		262EFACE18C68EBB00FF4FDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		262EFAD418C68EBB00FF4FDC /* BlurredMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlurredMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		262EFAD518C68EBB00FF4FDC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		262EFADD18C68EBB00FF4FDC /* BlurredMenuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlurredMenuTests-Info.plist"; sourceTree = "<group>"; };
 		262EFADF18C68EBB00FF4FDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		262EFAE118C68EBB00FF4FDC /* BlurredMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurredMenuTests.m; sourceTree = "<group>"; };
+		262EFAEB18C691C600FF4FDC /* SSTBlurredMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTBlurredMenuViewController.h; sourceTree = "<group>"; };
+		262EFAEC18C691C600FF4FDC /* SSTBlurredMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTBlurredMenuViewController.m; sourceTree = "<group>"; };
+		476243D4FF0643FB8F72F54B /* Pods-BlurredMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlurredMenu.xcconfig"; path = "Pods/Pods-BlurredMenu.xcconfig"; sourceTree = "<group>"; };
+		FAC656DDA0584D639B1F6C72 /* libPods-BlurredMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlurredMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 				262EFAB918C68EBB00FF4FDC /* CoreGraphics.framework in Frameworks */,
 				262EFABB18C68EBB00FF4FDC /* UIKit.framework in Frameworks */,
 				262EFAB718C68EBB00FF4FDC /* Foundation.framework in Frameworks */,
+				936D40F0EAE445CDA7056D79 /* libPods-BlurredMenu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +90,7 @@
 				262EFADB18C68EBB00FF4FDC /* BlurredMenuTests */,
 				262EFAB518C68EBB00FF4FDC /* Frameworks */,
 				262EFAB418C68EBB00FF4FDC /* Products */,
+				476243D4FF0643FB8F72F54B /* Pods-BlurredMenu.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +110,7 @@
 				262EFAB818C68EBB00FF4FDC /* CoreGraphics.framework */,
 				262EFABA18C68EBB00FF4FDC /* UIKit.framework */,
 				262EFAD518C68EBB00FF4FDC /* XCTest.framework */,
+				FAC656DDA0584D639B1F6C72 /* libPods-BlurredMenu.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,8 +121,8 @@
 				262EFAC518C68EBB00FF4FDC /* SSTAppDelegate.h */,
 				262EFAC618C68EBB00FF4FDC /* SSTAppDelegate.m */,
 				262EFAC818C68EBB00FF4FDC /* Main.storyboard */,
-				262EFACB18C68EBB00FF4FDC /* SSTViewController.h */,
-				262EFACC18C68EBB00FF4FDC /* SSTViewController.m */,
+				262EFAEB18C691C600FF4FDC /* SSTBlurredMenuViewController.h */,
+				262EFAEC18C691C600FF4FDC /* SSTBlurredMenuViewController.m */,
 				262EFACE18C68EBB00FF4FDC /* Images.xcassets */,
 				262EFABD18C68EBB00FF4FDC /* Supporting Files */,
 			);
@@ -159,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 262EFAE518C68EBB00FF4FDC /* Build configuration list for PBXNativeTarget "BlurredMenu" */;
 			buildPhases = (
+				F6121CBA42AC4F1389849250 /* Check Pods Manifest.lock */,
 				262EFAAF18C68EBB00FF4FDC /* Sources */,
 				262EFAB018C68EBB00FF4FDC /* Frameworks */,
 				262EFAB118C68EBB00FF4FDC /* Resources */,
+				16277531B3354DE0B71449E9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,6 +253,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16277531B3354DE0B71449E9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-BlurredMenu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6121CBA42AC4F1389849250 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		262EFAAF18C68EBB00FF4FDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -252,7 +293,7 @@
 			files = (
 				262EFAC318C68EBB00FF4FDC /* main.m in Sources */,
 				262EFAC718C68EBB00FF4FDC /* SSTAppDelegate.m in Sources */,
-				262EFACD18C68EBB00FF4FDC /* SSTViewController.m in Sources */,
+				262EFAED18C691C600FF4FDC /* SSTBlurredMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +417,7 @@
 		};
 		262EFAE618C68EBB00FF4FDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 476243D4FF0643FB8F72F54B /* Pods-BlurredMenu.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -389,6 +431,7 @@
 		};
 		262EFAE718C68EBB00FF4FDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 476243D4FF0643FB8F72F54B /* Pods-BlurredMenu.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -461,6 +504,7 @@
 				262EFAE718C68EBB00FF4FDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		262EFAE818C68EBB00FF4FDC /* Build configuration list for PBXNativeTarget "BlurredMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +513,7 @@
 				262EFAEA18C68EBB00FF4FDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
