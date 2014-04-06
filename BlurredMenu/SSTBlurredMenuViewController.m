@@ -8,18 +8,21 @@
 
 #import "SSTBlurredMenuViewController.h"
 
-#import <QuartzCore/QuartzCore.h>
-
-#import <GPUImage/GPUImage.h>
+#import "UIImage+BlurredFrame.h"
+#import "UIImage+ImageEffects.h"
 
 #define kSideBarWidth 276
 
 #define kBlurRadius 1.0f
 
+#define kContentChangeDelay 3.0f
+
 @interface SSTBlurredMenuViewController ()
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *screenView;
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIView *coloredView;
 
 @property (weak, nonatomic) IBOutlet UIView *sideBarBackgroundView;
 @property (weak, nonatomic) IBOutlet UIView *sideBarMenuView;
@@ -27,16 +30,25 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sideBarBackgroundImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *blurredScreenshotImageView;
 
+@property (weak, nonatomic) IBOutlet UILabel *blurRadiusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *saturationLabel;
+
+@property (weak, nonatomic) IBOutlet UISlider *blurRadiusSlider;
+@property (weak, nonatomic) IBOutlet UISlider *saturationSlider;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *sideBarBackgroundWidthConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *sideBarMenuTrailingConstraint;
 
-@property (strong, nonatomic) GPUImageiOSBlurFilter *blurFilter;
-
 @property (strong, nonatomic) UIImage *blurredScreenshotImage;
+
+@property (strong, nonatomic) NSArray *texts;
+@property (strong, nonatomic) NSArray *colors;
 
 @end
 
-@implementation SSTBlurredMenuViewController
+@implementation SSTBlurredMenuViewController {
+    NSUInteger contentIndex;
+}
 
 #pragma mark - View Lifecycle
 #pragma mark -
@@ -49,10 +61,22 @@
     NSCAssert(self.sideBarBackgroundImageView, @"Outlet is required");
     NSCAssert(self.sideBarMenuView, @"Outlet is required");
     
-    self.blurFilter = [[GPUImageiOSBlurFilter alloc] init];
-    self.blurFilter.blurRadiusInPixels = kBlurRadius;
-    
     self.sideBarBackgroundImageView.image = [self backgroundImageView];
+    
+    self.texts = @[
+                   @"Wayfarers post-ironic Vice Williamsburg sustainable next level. Gluten-free mlkshk salvia semiotics normcore, scenester four loko Vice organic trust fund fingerstache keytar squid umami PBR.",
+                   @"Chia Brooklyn hella authentic post-ironic photo booth. Dreamcatcher freegan VHS Thundercats normcore, narwhal PBR&B Vice chia Portland lomo. Brunch Shoreditch street art, meh freegan bicycle.",
+                   @"Tote bag freegan hella messenger bag gluten-free, wayfarers Intelligentsia Austin fanny pack. VHS banjo asymmetrical, irony biodiesel chia Wes Anderson cornhole pork belly YOLO distillery fingerstache Marfa."
+                  ];
+    self.colors = @[[UIColor redColor], [UIColor blueColor], [UIColor greenColor]];
+    
+    
+    NSCAssert(self.texts.count == self.colors.count, @"Counts must match for content arrays.");
+    self.label.text = self.texts[contentIndex];
+    self.coloredView.backgroundColor = self.colors[contentIndex];
+    
+    [self updateLabelForSlider:self.blurRadiusSlider];
+    [self updateLabelForSlider:self.saturationSlider];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -71,6 +95,7 @@
     [super viewDidAppear:animated];
     
     self.blurredScreenshotImage = [self blurredScreenshot];
+    [self performSelector:@selector(updateContent) withObject:self afterDelay:kContentChangeDelay];
 }
 
 #pragma mark - User Actions
@@ -87,31 +112,105 @@
     }
 }
 
+- (IBAction)sliderValueChanged:(UISlider *)sender {
+    [self updateLabelForSlider:sender];
+}
+
 #pragma mark - Private Methods
 #pragma mark -
 
-- (UIImage *)blurredScreenshot
-{
-    NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
+- (CGFloat)blurRadiusValue {
+    return roundf(self.blurRadiusSlider.value) / 4;
+}
+
+- (CGFloat)saturationValue {
+    return roundf(self.saturationSlider.value) / 4;
+}
+
+- (UIImage *)screenshotOfView:(UIView *)view excludingViews:(NSArray *)excludedViews {
+    if (!floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+        NSCAssert(FALSE, @"iOS 7 or later is required.");
+    }
     
-    UIImage *screenshot = nil;
-    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, self.view.opaque, 0.0);
-    if (isiOS7OrLater) {
-        [self.view drawViewHierarchyInRect:self.view.bounds afterScreenUpdates:YES];
-        screenshot = UIGraphicsGetImageFromCurrentImageContext();
+    // hide all exclude views before capturing screen and keep initial value
+    NSMutableArray *hiddenValues = [@[] mutableCopy];
+    for (NSUInteger index=0;index<excludedViews.count;index++) {
+        [hiddenValues addObject:[NSNumber numberWithBool:((UIView *)excludedViews[index]).hidden]];
+        ((UIView *)excludedViews[index]).hidden = TRUE;
     }
-    else {
-        [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-        screenshot = UIGraphicsGetImageFromCurrentImageContext();
-    }
+    
+    UIImage *image = nil;
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
+    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
+    
+    image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    UIImage *blurredSnapshotImage = [self.blurFilter imageByFilteringImage:screenshot];
+    // reset hidden values
+    for (NSUInteger index=0;index<excludedViews.count;index++) {
+        ((UIView *)excludedViews[index]).hidden = [[hiddenValues objectAtIndex:index] boolValue];
+    }
+    
+    // clean up
+    hiddenValues = nil;
+    
+    return image;
+}
+
+- (UIImage *)blurredScreenshot {
+    NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
+    
+    BOOL wasSideBarHidden = self.sideBarBackgroundImageView.hidden;
+    BOOL wasBlurredScreenshotHidden = self.blurredScreenshotImageView.hidden;
+        
+    UIImage *screenshot = [self screenshotOfView:self.view excludingViews:@[self.screenView, self.sideBarBackgroundImageView, self.blurredScreenshotImageView]];
+    UIImage *blurredSnapshotImage = nil;
+    
+    CGFloat blurRadius = [self blurRadiusValue];
+    CGFloat saturation = [self saturationValue];
+    
+    
+    blurredSnapshotImage = [screenshot applyBlurWithRadius:blurRadius tintColor:nil saturationDeltaFactor:saturation maskImage:nil];
+//    blurredSnapshotImage = [screenshot applyBlurWithRadius:blurRadius tintColor:nil saturationDeltaFactor:saturation maskImage:nil atFrame:self.view.frame];
     
     NSTimeInterval stop = [NSDate timeIntervalSinceReferenceDate];
-    DebugLog(@"Thing took %f sec", stop - start);
+    
+    CGFloat fps = 1.0f / (stop - start);
+    DebugLog(@"Blurring at %.02f fps", fps);
+    
+    self.sideBarBackgroundImageView.hidden = wasSideBarHidden;
+    self.blurredScreenshotImageView.hidden = wasBlurredScreenshotHidden;
 
     return blurredSnapshotImage;
+}
+
+- (void)updateBlurredScreenshot {
+    self.blurredScreenshotImage = [self blurredScreenshot];
+    self.blurredScreenshotImageView.image = self.blurredScreenshotImage;
+}
+
+- (void)updateContent {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(updateContent) object:nil];
+    
+    contentIndex++;
+    if (contentIndex >= self.colors.count) {
+        contentIndex = 0;
+    }
+    self.label.text = (NSString *)self.texts[contentIndex];
+    self.coloredView.backgroundColor = self.colors[contentIndex];
+    
+    [self updateBlurredScreenshot];
+    
+    [self performSelector:@selector(updateContent) withObject:self afterDelay:kContentChangeDelay];
+}
+
+- (void)updateLabelForSlider:(UISlider *)slider {
+    if ([self.blurRadiusSlider isEqual:slider]) {
+        self.blurRadiusLabel.text = [NSString stringWithFormat:@"Blur Radius (%.02f)", [self blurRadiusValue]];
+    }
+    else if ([self.saturationSlider isEqual:slider]) {
+        self.saturationLabel.text = [NSString stringWithFormat:@"Saturation (%.02f)", [self saturationValue]];
+    }
 }
 
 - (BOOL)isSideBarHidden {
@@ -128,7 +227,7 @@
     
     if (isHidden) {
         // Shown: background width is kSideBarWidth and trailing constraint is 0
-        self.blurredScreenshotImageView.image = self.blurredScreenshotImage;
+        [self updateBlurredScreenshot];
         self.screenView.hidden = FALSE;
         self.screenView.alpha = 0.0;
         [UIView animateWithDuration:duration delay:0.0 options:options animations:^{
@@ -139,7 +238,7 @@
             [self.view setNeedsLayout];
             [self.view layoutIfNeeded];
         } completion:^(BOOL finished) {
-            self.screenView.hidden = FALSE;
+            [self updateBlurredScreenshot];
         }];
     }
     else {
@@ -169,15 +268,16 @@
         CGContextRef context = UIGraphicsGetCurrentContext();
         
         //// Color Declarations
-        UIColor* myColor1 = [UIColor colorWithRed: 0.945 green: 0.631 blue: 0.506 alpha: 1];
-        UIColor* myColor2 = [UIColor colorWithRed: 0.699 green: 0.445 blue: 0.344 alpha: 1];
+        UIColor* myColor1 = [UIColor colorWithRed: 0.558 green: 0.142 blue: 0.142 alpha: 1];
+        UIColor* myColor2 = [UIColor colorWithRed: 0.779 green: 0.232 blue: 0.232 alpha: 1];
+        UIColor* myColor3 = [UIColor colorWithRed: 1 green: 0.321 blue: 0.321 alpha: 1];
         
         //// Gradient Declarations
         NSArray* myGradientColors = [NSArray arrayWithObjects:
                                      (id)myColor1.CGColor,
-                                     (id)[UIColor colorWithRed: 0.822 green: 0.538 blue: 0.425 alpha: 1].CGColor,
-                                     (id)myColor2.CGColor, nil];
-        CGFloat myGradientLocations[] = {0, 0.61, 1};
+                                     (id)myColor2.CGColor,
+                                     (id)myColor3.CGColor, nil];
+        CGFloat myGradientLocations[] = {0, 0.9, 1};
         CGGradientRef myGradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)myGradientColors, myGradientLocations);
         
         //// Rectangle Drawing

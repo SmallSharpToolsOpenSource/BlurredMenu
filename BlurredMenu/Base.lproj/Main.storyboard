@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Blurred Menu View Controller-->
@@ -16,22 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="3q4-Db-XJr">
-                                <rect key="frame" x="20" y="60" width="280" height="251"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Mixtape High Life Shoreditch, swag you probably haven't heard of them normcore skateboard next level yr viral. Deep v stumptown banh mi keffiyeh Tonx. Carles distillery skateboard letterpress art party beard. Distillery try-hard cred typewriter sartorial, fashion axe authentic. Tofu fanny pack mixtape, you probably haven't heard of them Schlitz raw denim PBR&amp;B cliche stumptown Godard wolf Portland keffiyeh. Ugh Tumblr cardigan asymmetrical 90's. Shabby chic mumblecore sriracha, iPhone readymade biodiesel American Apparel synth cliche narwhal slow-carb Etsy wayfarers.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0H-fl-yyZ" userLabel="Colored View">
-                                <rect key="frame" x="20" y="319" width="280" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="sg7-0q-RO7"/>
-                                    <constraint firstAttribute="height" constant="50" id="ww5-8I-9N6"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKD-bD-jGg">
                                 <rect key="frame" x="20" y="20" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,6 +26,55 @@
                                     <action selector="showHideButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="w6y-OX-L1o"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="3q4-Db-XJr">
+                                <rect key="frame" x="20" y="60" width="280" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0H-fl-yyZ" userLabel="Colored View">
+                                <rect key="frame" x="20" y="68" width="280" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="sg7-0q-RO7"/>
+                                    <constraint firstAttribute="height" constant="50" id="ww5-8I-9N6"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leaves" translatesAutoresizingMaskIntoConstraints="NO" id="cYi-mw-JtT">
+                                <rect key="frame" x="20" y="126" width="280" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="EDO-Lg-U4I"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blur Radius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfK-2p-Pve" userLabel="Blur Radius Slider Label">
+                                <rect key="frame" x="20" y="442" width="280" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="0.0" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="y8l-jG-pMN" userLabel="Blur Radius Slider">
+                                <rect key="frame" x="18" y="467" width="284" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="oTc-41-zDR"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C73-1C-DKC" userLabel="Saturation Slider Label">
+                                <rect key="frame" x="20" y="505" width="280" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="0.0" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="mYd-k8-3TF" userLabel="Saturation Slider">
+                                <rect key="frame" x="18" y="530" width="284" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="XsN-bb-D4Y"/>
+                                </connections>
+                            </slider>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxX-Bp-21p" userLabel="Screen View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -61,7 +94,7 @@
                                             <constraint firstAttribute="width" constant="320" id="qCd-bl-gYv"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ym9-Q9-aCG" userLabel="SideBar Background Image View">
+                                    <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ym9-Q9-aCG" userLabel="SideBar Background Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="276" height="568"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,35 +122,30 @@
                                         <rect key="frame" x="20" y="40" width="69" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" red="0.22352942819999999" green="0.58431375029999999" blue="0.81960791349999995" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxZ-o7-L36">
                                         <rect key="frame" x="20" y="104" width="69" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" red="0.22352942819999999" green="0.58431375029999999" blue="0.81960791349999995" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hft-jq-DoD">
                                         <rect key="frame" x="20" y="168" width="69" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" red="0.22352942819999999" green="0.58431375029999999" blue="0.81960791349999995" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJC-if-fjb">
                                         <rect key="frame" x="20" y="232" width="69" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" red="0.22352942819999999" green="0.58431375029999999" blue="0.81960791349999995" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYo-IU-uEK">
                                         <rect key="frame" x="20" y="296" width="69" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" red="0.22352942819999999" green="0.58431375029999999" blue="0.81960791349999995" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -139,27 +167,48 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="YQm-TA-sIw" firstAttribute="top" secondItem="mYd-k8-3TF" secondAttribute="bottom" constant="20" symbolic="YES" id="11h-Ck-t2d"/>
                             <constraint firstAttribute="centerX" secondItem="J0H-fl-yyZ" secondAttribute="centerX" id="3mi-j7-Uex"/>
+                            <constraint firstItem="C73-1C-DKC" firstAttribute="top" secondItem="y8l-jG-pMN" secondAttribute="bottom" constant="8" symbolic="YES" id="5iC-yz-lLB"/>
                             <constraint firstItem="J0H-fl-yyZ" firstAttribute="top" secondItem="3q4-Db-XJr" secondAttribute="bottom" constant="8" symbolic="YES" id="6y2-LI-xVQ"/>
                             <constraint firstItem="jJh-Mt-h4K" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="7Sg-dl-us9"/>
+                            <constraint firstAttribute="trailing" secondItem="mYd-k8-3TF" secondAttribute="trailing" constant="20" symbolic="YES" id="DOJ-Bp-eCk"/>
                             <constraint firstItem="YQm-TA-sIw" firstAttribute="top" secondItem="jJh-Mt-h4K" secondAttribute="bottom" id="F67-0j-ADL"/>
+                            <constraint firstAttribute="trailing" secondItem="cYi-mw-JtT" secondAttribute="trailing" constant="20" symbolic="YES" id="HmN-EU-ych"/>
                             <constraint firstItem="tLw-c0-Z7u" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="KUZ-DT-OgE"/>
+                            <constraint firstItem="mYd-k8-3TF" firstAttribute="top" secondItem="C73-1C-DKC" secondAttribute="bottom" constant="8" symbolic="YES" id="NqT-oZ-FqO"/>
                             <constraint firstItem="3q4-Db-XJr" firstAttribute="top" secondItem="yKD-bD-jGg" secondAttribute="bottom" constant="10" id="OcX-xW-fXN"/>
+                            <constraint firstAttribute="trailing" secondItem="C73-1C-DKC" secondAttribute="trailing" constant="20" symbolic="YES" id="OpD-nV-N8f"/>
                             <constraint firstItem="YQm-TA-sIw" firstAttribute="top" secondItem="TxX-Bp-21p" secondAttribute="bottom" id="P1L-Cz-Kb4"/>
+                            <constraint firstItem="hfK-2p-Pve" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="QU6-qJ-Ec4"/>
                             <constraint firstItem="3q4-Db-XJr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="S2l-u1-C7D"/>
                             <constraint firstItem="yKD-bD-jGg" firstAttribute="top" secondItem="gWA-9z-uMH" secondAttribute="bottom" id="S7a-1J-zfw"/>
+                            <constraint firstItem="C73-1C-DKC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="Upq-85-RzG"/>
+                            <constraint firstItem="y8l-jG-pMN" firstAttribute="top" secondItem="hfK-2p-Pve" secondAttribute="bottom" constant="8" symbolic="YES" id="V7v-Yp-6tw"/>
+                            <constraint firstItem="y8l-jG-pMN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="WUu-gc-qqF"/>
                             <constraint firstAttribute="trailing" secondItem="TxX-Bp-21p" secondAttribute="trailing" id="WXc-I2-dOj"/>
                             <constraint firstItem="TxX-Bp-21p" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="X9j-sF-m9j"/>
                             <constraint firstItem="TxX-Bp-21p" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Zo1-Sw-2UQ"/>
+                            <constraint firstAttribute="trailing" secondItem="y8l-jG-pMN" secondAttribute="trailing" constant="20" symbolic="YES" id="dkE-FN-KGd"/>
+                            <constraint firstAttribute="trailing" secondItem="hfK-2p-Pve" secondAttribute="trailing" constant="20" symbolic="YES" id="edg-Dj-mlS"/>
+                            <constraint firstItem="mYd-k8-3TF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="h1C-eV-hED"/>
                             <constraint firstItem="yKD-bD-jGg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="hUG-dO-dzY"/>
                             <constraint firstAttribute="trailing" secondItem="jJh-Mt-h4K" secondAttribute="trailing" id="nxn-Ir-wXk"/>
                             <constraint firstAttribute="trailing" secondItem="3q4-Db-XJr" secondAttribute="trailing" constant="20" id="oTz-CD-tj0"/>
                             <constraint firstAttribute="trailing" secondItem="tLw-c0-Z7u" secondAttribute="trailing" id="rvl-Ac-qiH"/>
+                            <constraint firstItem="cYi-mw-JtT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="uBl-h5-dir"/>
+                            <constraint firstItem="cYi-mw-JtT" firstAttribute="top" secondItem="J0H-fl-yyZ" secondAttribute="bottom" constant="8" symbolic="YES" id="uIl-Kc-VE1"/>
                             <constraint firstItem="YQm-TA-sIw" firstAttribute="top" secondItem="tLw-c0-Z7u" secondAttribute="bottom" id="vl2-Q9-5iw"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blurRadiusLabel" destination="hfK-2p-Pve" id="TBZ-NJ-5Z0"/>
+                        <outlet property="blurRadiusSlider" destination="y8l-jG-pMN" id="HsV-jO-UZ2"/>
                         <outlet property="blurredScreenshotImageView" destination="cx2-Y6-Jgq" id="5o2-Vz-goU"/>
+                        <outlet property="coloredView" destination="J0H-fl-yyZ" id="jlk-pn-8GI"/>
+                        <outlet property="label" destination="3q4-Db-XJr" id="DXg-rU-B6p"/>
+                        <outlet property="saturationLabel" destination="C73-1C-DKC" id="aiS-zW-fRz"/>
+                        <outlet property="saturationSlider" destination="mYd-k8-3TF" id="OES-dw-F5E"/>
                         <outlet property="screenView" destination="TxX-Bp-21p" id="mR7-vu-g4j"/>
                         <outlet property="sideBarBackgroundImageView" destination="ym9-Q9-aCG" id="wRn-tW-377"/>
                         <outlet property="sideBarBackgroundView" destination="jJh-Mt-h4K" id="JT4-ke-6Am"/>
@@ -177,6 +226,9 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Leaves" width="580" height="440"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
